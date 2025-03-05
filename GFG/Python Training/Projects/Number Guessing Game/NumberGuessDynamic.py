@@ -63,8 +63,8 @@ while chanceCounter < chances:
         print(f"That's right! The correct answer was {number_to_guess} and you got it right in only {chanceCounter} attempts!")
         break
     elif chanceCounter>=chances and user_guess!=number_to_guess:
-        print("Yikes...sorry bud. Thats the wrong answer!\n Your're out of chances but BETTER LUCK NEXT TIME!")
+        print(f"Yikes...sorry bud. Thats the wrong answer!\n The correct answer was {number_to_guess} \n Your're out of chances but BETTER LUCK NEXT TIME!")
     elif user_guess<number_to_guess:
-        print("Too low! Guess again")
+        print(f"Too low! Guess again. You have {chances-chanceCounter} guesses left!")
     elif user_guess>number_to_guess:
-        print("Too high! Guess again")
+        print(f"Too high! Guess again. You have {chances-chanceCounter} guesses left!")
