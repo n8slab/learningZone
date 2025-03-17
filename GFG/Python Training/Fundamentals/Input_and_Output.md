@@ -7,6 +7,21 @@ Output
 ```
 
 ``` --> 
+
+## Taking Input 
+Use the Python [input() Function](https://www.geeksforgeeks.org/python-3-input-function/) to take user input.
+Example:
+```python
+name = input("Enter your name: ")
+print("Hello,", name, "! Welcome!")
+```
+
+Output
+```
+Enter your name: John
+Hello, John ! Welcome!
+```
+
 ## Printing Variables
 ```python
 # Single variable
@@ -24,6 +39,121 @@ Output
 ```
 Jerry
 Tom 100 Warner Bros Studios
+```
+
+## Take Multiple Inputs
+```python
+# taking two inputs at a time
+x, y = input("Enter two values: ").split()
+print("Number of boys: ", x)
+print("Number of girls: ", y)
+ 
+# taking three inputs at a time
+x, y, z = input("Enter three values: ").split()
+print("Total number of students: ", x)
+print("Number of boys is : ", y)
+print("Number of girls is : ", z)
+```
+
+Output
+```
+Enter two values: 5 10
+Number of boys:  5  
+Number of girls:  10
+Enter three values: 5 10 15
+Total number of students:  5
+Number of boys is :  10     
+Number of girls is :  15 
+```
+> For more info on the split() method, [click here](https://www.geeksforgeeks.org/python-string-split/)
+
+## Take Conditional Input From User
+```python
+# Prompting the user for input
+age_input = input("Enter your age: ")
+
+# Converting the input to an integer
+age = int(age_input)
+
+# Checking conditions based on user input
+if age < 0:
+    print("Please enter a valid age.")
+elif age < 18:
+    print("You are a minor.")
+elif age >= 18 and age < 65:
+    print("You are an adult.")
+else:
+    print("You are a senior citizen.")
+```
+
+Output
+```
+Enter your age: 21
+You are an adult.
+```
+
+## How to Change Input Type (Typecasting)
+Python's default input() function takes user input as a string. To take in as an int, float, etc you have to typecast it first.
+
+**Ex. 1: Print Names**
+```python
+# Taking input as string
+name = input("What is your name?: \n")
+print(name)
+```
+
+Output
+```
+What is your name?: 
+Nate
+Nate
+``` 
+## Printing Numbers (int and float)
+```python
+# Taking input and Typecasting to int
+n = int(input("How many cups do you have?: "))
+print(n)
+
+# Taking input and Typecasting to float
+price = float(input("How much does each cup cost?: "))
+print(price)
+```
+
+Output
+```
+How many cups do you have?: 10
+10
+
+How much does each cup cost?: 19.99
+19.99
+``` 
+
+## Find Data Type of Input
+```python
+a = "Hello World"
+b = 10
+c = 11.22
+d = ("Who", "are", "you")
+e = ["You", "Es", "Aye"]
+f = {"Dog": 1, "Cat":2, "Bird":3}
+
+
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(type(e))
+print(type(f))
+```
+
+Output
+```
+<class 'str'>
+<class 'int'>
+<class 'float'>
+<class 'tuple'>
+<class 'list'>
+<class 'dict'>
 ```
 
 ## Output Formatting
@@ -97,5 +227,7 @@ print("The sum is %d" %add)
 
 Output
 ```
-Enter a value: 50The sum is 55
+Enter a value: 50
+The sum is 55
 ```
+
